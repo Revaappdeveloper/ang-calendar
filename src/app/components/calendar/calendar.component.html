@@ -1,0 +1,38 @@
+<!-- <div class="cal-container">
+
+</div> -->
+<div class="cal-container">
+    <div class="inner-box">
+        <div class="left-box">
+            <div class="left-text">
+                <h3>{{day}} <br> {{month}} {{date}}</h3>
+            </div>
+            <div class="note-sec">
+                <div>
+                    <div class="new-note">
+                        <input type="text" #infoElm style="background-color: rgb(245, 118, 114); border: none; color: whitesmoke" value="new note" [(ngModel)]="info" name="info">
+                    </div>
+                    <div class="icon add-note-icon" (click)="addNote(info)"></div>
+                </div>
+
+                <hr>
+                <div *ngFor="let note of notes; let i= index" class="added-note">
+                    <div>{{note?.info}}</div>
+                    <div class="icon delete-note-icon" (click)="deleteNote(i)"> </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="right-box">
+            <div class="year-holder">2019</div>
+            <div class="calendar-holder">
+                <p-calendar [(ngModel)]="date14" [inline]="true" [showWeek]="true" (onSelect)="getDate($event)"></p-calendar>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+</div>
